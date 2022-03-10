@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <title>Hydro closet</title>
+  <meta name="viewport" content="width=1080, initial-scale=0.4, maximum-scale=0.4, user-scalable=0">
+
+<style>
+h1{
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 96%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+th {
+  background-color: #36502e;
+}
+
+select{
+  padding: 6px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.blockImg {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.main{
+margin-left: 270px;
+margin-right: 100px;
+margin-top: 50px;
+background-color: #1F282D;
+color: white;
+
+}
+.sidenav {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2b383f;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 20px 8px 20px 20px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+  color: white;
+  display: block;
+ 
+}
+
+.sidenav a:hover {
+  background-color: rgb(136, 135, 135);
+  
+}
+.sidenavIn {
+  padding: 6px 8px 6px 20px;
+  text-decoration: none;
+  font-size: 21px;
+  color: #413f3f;
+  display: block;
+}
+
+  pre {margin:0px; padding-top:15px; font-family: "Lato", sans-serif;}
+  .blockMats {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      border:1px solid;
+      border-color:#2b383f;
+      background-color: #2b383f;
+      margin:0;
+      margin-bottom: 30px;
+      padding:0;
+  }
+
+  .blockSetting {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      border:1px solid;
+      border-color:#2b383f;
+      background-color: #2b383f;
+      margin:0;
+      margin-bottom: 30px;
+      padding:0;
+  }
+
+  .blockInfo {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      border:1px solid;
+      border-color:#2b383f;
+      background-color: #2b383f;
+      margin:0;
+      margin-bottom: 30px;
+      padding:0;
+  }
+  
+  .blockSelect {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      border:1px solid;
+      border-color:#2b383f;
+      background-color: #2b383f;
+  }
+
+  
+  .g-block-left {
+      width: 75%;
+      height:100%;
+      float: left;
+      display:inline-block;
+  }
+
+  .g-block-small-left {
+      width: 37%;
+      height:100%;
+      float: left;
+      display:inline-block;
+  }
+  
+  .g-block-right {
+      width: 28%;
+      float: right;
+      height:100%;
+      display:inline-block;
+  }
+
+  .g-block-small-right {
+      margin-left: 30px;
+      width: 36%;
+      height:100%;
+      display:inline-block;
+
+  }
+
+</style>
+<body class="main">
+  <div class="sidenav">
+  <div class="sidenavIn">
+    <img src="photo/hydro.png" width="190" height="190">
+  </div>
+      <div>
+      <a href="liveCharts.html"> Live charts</a>
+     </div>
+     <div>
+   <a href="#header">Haut de page</a> 
+   <a href="#footer">Bas de page</a>
+     </div>  
+  </div>
+
+  <div class="g-block-left">
+    <div class="blockInfo">
+      <pre>
+        <table>
+         <h1>Plant Database</h1>
+            <tr>
+              <th>Number of plant</th>
+              <th>Common name</th>
+              <th>Plant name</th>
+              <th>Seeds origin</th>
+              <th>Starting date</th>
+              <th>End date</th>
+              <th>Harvest(kg)</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Borlotti bean</td>
+              <td><i>Phaseolus vulgaris</i></td>
+              <td>Random field crops in Yamaska</td>
+              <td>Undefined</td>
+              <td>Undefined</td>
+              <td>0.x</td>
+              <td style="background-color:green">Ongoing</td>
+           </tr>
+           <tr>
+            <td>1</td>
+            <td>tomato</td>
+            <td><i>fegerge</i></td>
+            <td>ghg</td>
+            <td>Undefined</td>
+            <td>Undefined</td>
+            <td>0</td>
+            <td style="background-color:blue">Incomming</td>
+         </tr>
+         <tr>
+          <td>1</td>
+          <td>exemple</td>
+          <td><i>gfegedg</i></td>
+          <td>lklklk</td>
+          <td>(9/07/22)</td>
+          <td>(31/10/22)</td>
+          <td>3</td>
+          <td style="background-color:red">Finished</td>
+       </tr>
+        </table>      
+      </pre>
+    </div>
+  </div>
+
+  <div class="g-block-small-left">
+    <div class="blockSetting">
+          <h1>choose a plant</h1>
+          <select name="select" id="select" onchange="changeSelection()"><!--Added the onchange Function -->
+            <option value="0">Please Select a plant</option>
+            <option value="1">Borlotti bean</option>
+            <option value="2">Stop Bulk Messages</option>
+        </select>
+      <div class="blockImg">
+        <img id="img1" src="photo/borlotti.png" width="360" height="360">
+        <img id="img2" src="photo/hydro.png" width="160" height="160">
+      </div>
+   
+  </div>
+</div>
+
+
+  <div class="g-block-small-right">
+    <div class="blockMats">
+         <table id="mat1">
+          <h1>Components List</h1>
+          <tr>
+            <th>Component</th>
+            <th>Model</th>
+          </tr>
+           <tr>
+             <td>Humidity</td>
+             <td>DHT11</td>
+           </tr>
+           <tr>
+             <td>Temperature</td>
+             <td>DHT11</td>
+            </tr>
+            <tr>
+              <td>Light</td>
+              <td>MAXSISUN MF1000</td>
+             </tr>
+             <tr>
+              <td>Microcontroller</td>
+              <td>Arduino uno</td>
+             </tr>
+             <tr>
+              <td>Water pump</td>
+              <td>grege</td>
+             </tr>
+             <tr>
+              <td>Peristaltic pump</td>
+              <td>4x 12v xx</td>
+             </tr>
+        </table>
+        <table id="mat2">
+          <tr>
+            <th>humidity</th>
+            <th>temperature</th>
+            <th>Co2</th>
+            <th>light</th>
+            <th>Water pump</th>
+            <th>pH</th>
+            <th>PPM</th>
+          </tr>
+        </table>   
+    </div>
+  </div>
+
+  <div class="g-block-left">
+    <div class="blockSetting">
+            <table id="set1">
+              <h1>Growing condition</h1>
+              <tr>
+                
+                <th>growing stage</th>
+                <th>start stage</th>
+                <th>end stage</th>
+                <th>Indoor/Outdoor</th>
+                <th>Small decription</th>
+                <th>humidity</th>
+                <th>temperature</th>
+                <th>Co2</th>
+                <th>light time</th>
+                <th>light PPFD</th>
+                <th>light DLI</th>
+                <th>pH</th>
+                <th>PPM</th>
+              </tr>
+              <tr>
+                <td>Leaf</td>
+                <td>(dd/mm/yyyy)</td>
+                <td>(dd/mm/yyyy)</td>
+                <td>Indoor</td>
+                <td>In a closet</td>
+                <td>35</td>
+                <td>25C</td>
+                <td>no data yet</td>
+                <td>7am to 9pm</td>
+                <td>no data yet</td>
+                <td>no data yet</td>
+                <td>6</td>
+                <td>600</td>
+             </tr>
+             <tr>
+              <td>Flower</td>
+              <td>(dd/mm/yyyy)</td>
+              <td>(dd/mm/yyyy)</td>
+              <td>Indoor</td>
+              <td>In a closet</td>
+              <td>35</td>
+              <td>25C</td>
+              <td>no data yet</td>
+              <td>7am to 9pm</td>
+              <td>no data yet</td>
+              <td>no data yet</td>
+              <td>6</td>
+              <td>600</td>
+           </tr>
+              <tr>
+                <td>Fruit</td>
+                <td>(dd/mm/yyyy)</td>
+                <td>(dd/mm/yyyy)</td>
+                <td>Indoor</td>
+                <td>In a closet</td>
+                <td>35</td>
+                <td>25C</td>
+                <td>no data yet</td>
+                <td>7am to 9pm</td>
+                <td>no data yet</td>
+                <td>no data yet</td>
+                <td>6</td>
+                <td>600</td>
+             </tr>
+            </table>
+            <table id="set2">
+              <tr>
+                <th>growing stage</th>
+                <th>start stage</th>
+                <th>end stage</th>
+                <th>humidity</th>
+                <th>temperature</th>
+                <th>Co2</th>
+                <th>light time</th>
+                <th>light value</th>
+                <th>pH</th>
+                <th>PPM</th>
+              </tr>
+            </table>      
+    </div>
+    <div class="blockSetting">
+        <h1>test</h1>
+         <table>
+           <tr>
+             <th>NameCommon</th>
+           </tr>
+           <td>h</td>
+     
+         </table>
+         <label>test</label> <input id="NameCommon">
+    </div>
+  </div>
+
+
+</body>
+<script>
+  //When the option is changed 
+  var changeSelection = function () {
+      //Hide all of the elements
+      hideAll();
+      //If the select value is > 0 (is valid)
+      if (document.getElementById("select").value > 0) {
+          //Set the element display to "block" (block is typically the default display type)
+          document.getElementById("set" + document.getElementById("select").value).style.display = "block";
+          document.getElementById("mat" + document.getElementById("select").value).style.display = "block";
+          document.getElementById("img" + document.getElementById("select").value).style.display = "block";
+      }
+  };
+  //Function to hide all of the elements
+  var hideAll = function () {
+      //Loop through the elements
+      for (var i = 1; i <= 2; i++) {
+          //Hide each one
+          document.getElementById("set" + i).style.display = "none";
+          document.getElementById("mat" + i).style.display = "none";
+          document.getElementById("img" + i).style.display = "none";
+      }
+  };
+  //This function automaticaly executes when the page is loaded
+  (function () {
+      //Hide all of the elements
+      hideAll();
+  })()
+</script>
+<script src="table/firetableplantdb.js" type="module"></script>
+</html>

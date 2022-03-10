@@ -1,0 +1,22 @@
+{
+  "name": "hydroponic",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "firebase": "^9.6.6",
+    "next": "^12.0.10",
+    "serialport": "^9.2.8",
+    "socket.io": "^4.4.1"
+  },
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
